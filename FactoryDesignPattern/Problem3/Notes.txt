@@ -1,0 +1,69 @@
+Problem: Multi-Shape Drawing Application
+Description:
+
+You are tasked with developing a Multi-Shape Drawing Application that allows users to create various geometric shapes (e.g., Circle, Rectangle, Triangle) with customizable properties (like color and size). This application will use the Factory Design Pattern to manage the creation of different shapes, allowing for flexibility and scalability in adding new shapes in the future.
+
+Requirements:
+Shape Interface:
+
+Define a Shape interface with the following methods:
+void draw(): Draws the shape and prints details about the shape.
+double getArea(): Returns the area of the shape.
+String getColor(): Returns the color of the shape.
+Concrete Shape Classes:
+
+Implement at least three concrete classes that implement the Shape interface:
+Circle: This class should include properties for radius and color.
+Rectangle: This class should include properties for width, height, and color.
+Triangle: This class should include properties for base, height, and color.
+Each class should provide the logic to calculate the area and draw the shape.
+ShapeFactory Class:
+
+Create a ShapeFactory class with a method:
+Shape createShape(String type, double... dimensions): This method should create and return the appropriate shape object based on the provided type and dimensions (like radius for circles or width and height for rectangles).
+Customization Logic:
+
+Each shape class should allow for customization of the shape's properties (such as color and size) during creation. You can include an optional parameter for color in the shape constructor.
+Client Class:
+
+Implement a Client class that serves as the entry point of the application:
+Use the ShapeFactory to create various shapes with different dimensions and colors.
+Demonstrate the drawing of these shapes and print their areas.
+Suggested Folder Structure:
+arduino
+Copy code
+ShapeDrawingApplication/
+└── Problem4/
+    ├── Shape.java                // Interface
+    ├── Circle.java               // Concrete class
+    ├── Rectangle.java            // Concrete class
+    ├── Triangle.java             // Concrete class
+    ├── ShapeFactory.java          // Factory class
+    └── Client.java               // Main client class
+Example Method Descriptions:
+Shape Interface:
+
+void draw(): Outputs the details of the shape (type, dimensions, color).
+double getArea(): Returns the area of the shape based on its dimensions.
+String getColor(): Returns the color of the shape.
+Circle Class:
+
+Properties: double radius and String color.
+Methods:
+double getArea(): Calculates and returns the area of the circle (π * radius²).
+void draw(): Prints details about the circle.
+Rectangle Class:
+
+Properties: double width, double height, and String color.
+Methods:
+double getArea(): Calculates and returns the area of the rectangle (width * height).
+void draw(): Prints details about the rectangle.
+Triangle Class:
+
+Properties: double base, double height, and String color.
+Methods:
+double getArea(): Calculates and returns the area of the triangle (0.5 * base * height).
+void draw(): Prints details about the triangle.
+ShapeFactory Class:
+
+Shape createShape(String type, double... dimensions): Returns a new shape object based on the type and dimensions provided.

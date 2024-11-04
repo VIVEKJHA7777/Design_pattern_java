@@ -1,0 +1,45 @@
+Question 2: Design a Factory for creating different types of beverages in a beverage shop. Implement the Factory 
+Design Pattern to produce different beverage types based on the user's selection. The beverage types include 
+Coffee, Tea, and Juice. Each beverage should implement a common interface that defines methods for preparation 
+and serving.
+
+Description of the Methods to Implement
+Interface: Beverage
+
+Method: prepare()
+
+Description: This method will contain the logic for preparing the beverage. Each specific beverage (Coffee, Tea, Juice) will implement its own preparation logic.
+Return Type: void (No return value)
+Method: serve()
+
+Description: This method will contain the logic for serving the beverage. Similar to preparation, each beverage will have its own way of being served.
+Return Type: void (No return value)
+Method: getIngredients()
+
+Description: This method will return a list of ingredients used in the beverage. This allows the client to know what is included in each beverage.
+Return Type: String[] (An array of strings representing the ingredients)
+Concrete Classes
+
+Class: Coffee
+
+Method Implementations:
+prepare(): Prepare the coffee (e.g., brewing).
+serve(): Serve the coffee (e.g., pour into a cup).
+getIngredients(): Return ingredients such as water, coffee beans, sugar.
+Class: Tea
+
+Method Implementations:
+prepare(): Prepare the tea (e.g., steeping).
+serve(): Serve the tea (e.g., pour into a cup).
+getIngredients(): Return ingredients such as water, tea leaves, sugar.
+Class: Juice
+
+Method Implementations:
+prepare(): Prepare the juice (e.g., squeezing).
+serve(): Serve the juice (e.g., pour into a glass).
+getIngredients(): Return ingredients such as fruits, water, sugar.
+Factory Class: BeverageFactory
+
+Method: getBeverage(String beverageType)
+Description: This method will take a string input specifying the type of beverage and return an instance of the corresponding beverage class (Coffee, Tea, or Juice).
+Return Type: Beverage (An instance of the Beverage interface)
