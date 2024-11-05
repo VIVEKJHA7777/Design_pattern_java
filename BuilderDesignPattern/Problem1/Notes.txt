@@ -1,0 +1,24 @@
+Question
+You are tasked with building a "Pizza Ordering System." In this system, users should be able to customize their pizza orders by specifying various options. Each pizza has a fixed base price, but the final price depends on the customization choices made by the user.
+
+The available customization options include:
+
+Size: Small, Medium, Large
+Crust: Thin, Thick, Stuffed
+Cheese Type: Mozzarella, Cheddar, Parmesan, No Cheese
+Toppings: Pepperoni, Mushrooms, Onions, Olives, Peppers, Bacon (customers can choose multiple toppings)
+Extras: Extra Cheese, Garlic Crust, Extra Sauce
+Write a program to implement this system using the Builder Design Pattern. The builder should allow users to create a pizza with any combination of the above options.
+
+Requirements:
+Implement a Pizza class that represents a pizza with the properties mentioned above.
+Create a PizzaBuilder class that allows step-by-step customization of a Pizza object.
+The PizzaBuilder should have methods to set each of the properties (e.g., setSize(), setCrust(), etc.).
+Add a build() method in PizzaBuilder that returns the final Pizza object.
+The Pizza class should be immutable after it's built, meaning users should not be able to change its properties 
+once it is created.
+Write a simple main function to demonstrate how a user could create a pizza using the builder.
+Example:
+
+A user wants to order a Large pizza with a Thick crust, Mozzarella cheese, toppings of Pepperoni and Mushrooms, and 
+the Extra Cheese option. The program should allow them to build this specific pizza and display its details.
