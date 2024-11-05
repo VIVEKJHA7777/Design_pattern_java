@@ -1,0 +1,25 @@
+Scenario: Workflow Automation System
+Imagine you’re designing a workflow automation system for a business. The system lets users create custom workflows, each containing multiple steps that may involve various actions and conditions. Each workflow has specific properties and a series of configurable steps.
+
+Problem Statement
+Create a Workflow class that represents a sequence of tasks (or steps) in a business process. Each workflow should have configurable attributes, and each step within the workflow should have its own specific actions, conditions, and order of execution.
+
+Each workflow should support the following configurations:
+
+Workflow Name (required): Name of the workflow (e.g., "Invoice Processing").
+Creator (required): The name of the person who created the workflow.
+Description (optional): A brief description of what the workflow does.
+Steps (required): A list of steps, where each step has the following attributes:
+Step Name (e.g., "Verify Invoice", "Send Approval Request").
+Action: The action to be taken, e.g., "Send Email", "Generate Report".
+Condition: Optional condition to check before executing the action, e.g., "If amount > $1000".
+Order: The order in which the steps should be executed.
+Status (optional): The initial status of the workflow, such as "Active" or "Inactive".
+Requirements
+Create a Workflow class that is only accessible through a WorkflowBuilder.
+Define an inner WorkflowBuilder class inside Workflow, which allows users to create a Workflow instance.
+Each step within the workflow should be created using a separate StepBuilder class (which could also be a static inner class within Workflow). This way, users can add individual steps to the workflow with custom attributes.
+Ensure that Workflow Name, Creator, and at least one step are required fields.
+If a required attribute is missing when build() is called, throw an exception.
+Make Workflow and Step immutable after they are built.
+Implement a toString() method in Workflow to display the workflow’s configuration details.
