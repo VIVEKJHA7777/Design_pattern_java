@@ -1,0 +1,32 @@
+Scenario: Data Pipeline Configuration System
+Problem Statement
+Design a system that allows users to define and configure custom data processing pipelines. Each pipeline consists 
+of multiple stages (e.g., Data Ingestion, Data Transformation, Data Validation, Data Output) and allows users to 
+configure each stage with various actions and parameters.
+
+A pipeline must be built using a PipelineBuilder that configures essential attributes, while each stage within the 
+pipeline is created through a separate StageBuilder. The goal is to make it easy to configure complex data pipelines 
+with multiple stages and customizable actions.
+
+Requirements
+Pipeline Attributes:
+
+Pipeline Name: Required name of the pipeline, e.g., "Customer Data Pipeline."
+Creator: The name of the person or team creating the pipeline.
+Description: Optional description of the pipeline’s purpose.
+Stages: A series of configurable stages within the pipeline.
+Stage Attributes:
+
+Stage Name: Required name of the stage, e.g., "Data Ingestion."
+Action Type: The type of action performed, e.g., "Extract," "Transform," or "Load."
+Parameters: Optional parameters that can be customized for each stage, such as batch size or timeout duration.
+Order: Specifies the execution order within the pipeline.
+Condition: Optional condition to determine whether the stage should execute, e.g., "If record count > 100."
+Validation Requirements:
+
+Every pipeline must have a name, a creator, and at least one stage.
+Each stage must have a name, action type, and order of execution.
+A pipeline and its stages should be immutable once built.
+Output Requirements:
+
+Implement a toString() method to display pipeline configurations, including each stage and its settings.
